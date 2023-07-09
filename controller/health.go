@@ -24,7 +24,7 @@ func NewHeartbeat(h *Controller) *Health {
 // @Accept json
 // @Produce json
 // @Success 200 {object} protocol.RespHeader
-// @Router /health/check [get]
+// @Router /health [get]
 func (p *Health) Check(c echo.Context) error {
 	return p.ctl.RespOK(c, protocol.NewRespHeader(protocol.Success))
 }
