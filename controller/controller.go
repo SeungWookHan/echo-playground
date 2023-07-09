@@ -22,8 +22,9 @@ func NewCTL(cf *conf.Config) (*Controller, error) {
 	return r, nil
 }
 
-func (p *Controller) RespOK(c echo.Context, resp interface{}) {
+func (p *Controller) RespOK(c echo.Context, resp interface{}) error {
 	c.JSON(http.StatusOK, resp)
+	return nil
 }
 
 func (p *Controller) RespError(c echo.Context, body interface{}, status int, err ...interface{}) {
