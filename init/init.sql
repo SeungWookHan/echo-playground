@@ -1,0 +1,9 @@
+CREATE TABLE restrict_record (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  name VARCHAR(255) NOT NULL,
+  action VARCHAR(255) NOT NULL,
+  reason VARCHAR(255),
+  start_time DATETIME,
+  end_time DATETIME, 
+  create_time DATETIME DEFAULT CURRENT_TIMESTAMP
+);
